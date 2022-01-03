@@ -28,7 +28,7 @@ export default class BookItems extends HTMLElement {
   render() {
     this.shadow.innerHTML = `
     <style>
-    @import '../style.css'
+    @import `${window.location.pathname}style.css`
     </style>
     <article class="book-item">
     <div class="book-item-cover">

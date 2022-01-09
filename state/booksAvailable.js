@@ -2,7 +2,7 @@ import idGenerator from "../utils/idGenerator.js";
 
 const booksAvailable = [
   {
-    name: 'Production-Ready Microservices', author: 'Susan J. Fowler', price: '$32', imageSrc: './images/41yJ75gpV-L._SX381_BO1,204,203,200_.jpg', id: idGenerator.next().value, pages: 259, language: 'English', publisher: "O'Reilly Media", publicationDate: 'November 30, 2016', readingAge: 18, rating: 4.8, description: `
+    name: 'Production-Ready Microservices', author: 'Susan J. Fowler', price: '$32', imageSrc: './static/images/41yJ75gpV-L._SX381_BO1,204,203,200_.jpg', id: idGenerator.next().value, pages: 259, language: 'English', publisher: "O'Reilly Media", publicationDate: 'November 30, 2016', readingAge: 18, rating: 4.8, description: `
 
     <strong>Who This Book Is Written For?</strong>
     <br>
@@ -14,12 +14,12 @@ const booksAvailable = [
     I do assume that the reader is familiar with the basic concepts of microservices, with microservice architecture, and with the fundamentals of modern distributed systems —readers who understand these concepts well will gain the most from this book. For readers unfamiliar with these topics, I’ve dedicated the first chapter to a short overview of microservice architecture, the microservice ecosystem, organizational challenges that accompany microservices, and the nitty-gritty reality of breaking a monolithic application into microservices.
     ` },
   {
-    name: 'Release It!', author: 'Michael T. Nygard', price: '$45', imageSrc: './images/414CRjLjwgL._SX403_BO1,204,203,200_.jpg', id: idGenerator.next().value, pages: 350, language: 'English', publisher: 'Pragmatic Bookshelf', publicationDate: 'July 12, 2017', readingAge: 18, rating: 3.5, description: `
+    name: 'Release It!', author: 'Michael T. Nygard', price: '$45', imageSrc: './static/images/414CRjLjwgL._SX403_BO1,204,203,200_.jpg', id: idGenerator.next().value, pages: 350, language: 'English', publisher: 'Pragmatic Bookshelf', publicationDate: 'July 12, 2017', readingAge: 18, rating: 3.5, description: `
   Whether it's in Java, .NET, or Ruby on Rails, getting your application ready to ship is only half the battle. Did you design your system to survivef a sudden rush of visitors from Digg or Slashdot? Or an influx of real world customers from 100 different countries? Are you ready for a world filled with flakey networks, tangled databases, and impatient users? If you're a developer and don't want to be on call for 3AM for the rest of your life, this book will help. In Release It!, Michael T. Nygard shows you how to design and architect your application for the harsh realities it will face. You'll learn how to design your application for maximum uptime, performance, and return on investment. Mike explains that many problems with systems today start with the design. 
   
   ` },
   {
-    name: 'React-and-React-Native---Third-Edition', author: 'Adam Boduch , Roy Derks ', price: "$5", imageSrc: './images/react_and_reactNative.png', id: idGenerator.next().value, pages: 320, language: 'English', publisher: 'Lumina', publicationDate: 'September 4, 2012', readingAge: 18, rating: 2.4, description: `
+    name: 'React-and-React-Native---Third-Edition', author: 'Adam Boduch , Roy Derks ', price: "$5", imageSrc: './static/images/react_and_reactNative.png', id: idGenerator.next().value, pages: 320, language: 'English', publisher: 'Lumina', publicationDate: 'September 4, 2012', readingAge: 18, rating: 2.4, description: `
   
   <strong>Key Features</strong>
   <br><br>

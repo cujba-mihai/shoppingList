@@ -2,7 +2,7 @@ import idGenerator from "../utils/idGenerator.js";
 
 const booksAvailable = [
   {
-    name: 'Production-Ready Microservices', author: 'Susan J. Fowler', price: '$32', imageSrc: '/static/images/41yJ75gpV-L._SX381_BO1,204,203,200_.jpg', id: idGenerator.next().value, pages: 259, language: 'English', publisher: "O'Reilly Media", publicationDate: 'November 30, 2016', readingAge: 18, rating: 4.8, description: `
+    name: 'Production-Ready Microservices', author: 'Susan J. Fowler', price: '$32', imageSrc: './static/images/41yJ75gpV-L._SX381_BO1,204,203,200_.jpg', id: idGenerator.next().value, pages: 259, language: 'English', publisher: "O'Reilly Media", publicationDate: 'November 30, 2016', readingAge: 18, rating: 4.8, description: `
 
     <strong>Who This Book Is Written For?</strong>
     <br>

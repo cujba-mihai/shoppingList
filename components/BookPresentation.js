@@ -28,7 +28,7 @@ export default class BookPresentation extends HTMLElement {
 
     this.shadow.querySelector("#button__back").addEventListener("click", e => {
       e.preventDefault();
-      history.pushState({}, 'Home', "/shoppingList/")
+      history.pushState({}, 'Home', "/shoppingList")
 
       document.body.innerHTML = `
       <div id="root">

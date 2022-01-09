@@ -1,16 +1,40 @@
 import { setIndex } from "../state/listIndex.js";
 import calculateTotal from "../state/calculateTotal.js";
 
+function updateCartItems(id, count, totalPrice) {
+  const itemsInCart = JSON.parse(window.localStorage.getItem('booksInCart'));
+  const currentItem = itemsInCart.find(e => e.id == id);
+  const newState = {
+    ...currentItem,
+    count,
+    totalPrice
+  }
+  const newArr = [
+    ...itemsInCart.filter(e => e.id !== id),
+    newState
+  ]
+
+  window.localStorage.setItem('booksInCart', JSON.stringify(newArr));
+}
+
+
+function STORAGE_REMOVE_ITEM(id) {
+  const itemsInCart = JSON.parse(window.localStorage.getItem('booksInCart'));
+  const newState = itemsInCart.filter(e => e.id !== id);
+
+  window.localStorage.setItem('booksInCart', JSON.stringify(newState));
+}
+
 export default class CartItem extends HTMLElement {
 
-  constructor(name, price, id) {
+  constructor(name, price, id, count = 1) {
     super();
     this.shadow = this.attachShadow({ mode: "open" });
     this.state = {
       id,
       name,
       price,
-      count: 1,
+      count,
       totalPrice() {
         const total = this.price.match(/[^$]?\d+/g) * this.count
         return total;
@@ -35,6 +59,8 @@ export default class CartItem extends HTMLElement {
     this.connectedCallback()
     calculateTotal();
     this._showError();
+
+    updateCartItems(this.state.id, this.state.count, this.state.totalPrice());
   }
 
   _decrease() {
@@ -42,6 +68,8 @@ export default class CartItem extends HTMLElement {
     this.connectedCallback();
     this._showError();
     calculateTotal();
+
+    updateCartItems(this.state.id, this.state.count, this.state.totalPrice());
   }
 
 
@@ -51,6 +79,8 @@ export default class CartItem extends HTMLElement {
     thisIndex.state.wasAdded = false;
     this.remove();
     this.render();
+
+    STORAGE_REMOVE_ITEM(this.state.id)
   }
 
   _showError() {

@@ -150,3 +150,7 @@ ul {
   color: #fff;
   background: #dc3545;
 }
+
+#book_item_link {
+  cursor: pointer;
+}

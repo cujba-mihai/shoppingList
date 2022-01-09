@@ -50,7 +50,7 @@ export default class BookItems extends HTMLElement {
     })
 
     this.shadowRoot.querySelector("#book_item_link").addEventListener("click", e => {
-      history.pushState({}, this.state.name, `shoppingList/#book/${slugify(this.state.name)}`);
+      history.pushState({}, this.state.name, `#book/${slugify(this.state.name)}`);
 
 
       const bookProps = booksAvailable.find(e => e.id === this.state.id);

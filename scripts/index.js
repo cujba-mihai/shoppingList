@@ -20,7 +20,7 @@ window.onload = () => {
   initStore();
 
   const cartItems = JSON.parse(window.localStorage.getItem('booksInCart'));
-  export const addItemsToCart = () => cartItems.map(e => {
+  const addItemsToCart = () => cartItems.map(e => {
     const cartDOM = document.getElementById('shopping_cart');
     cartDOM.appendChild(new CartItem(e.name, e.price, e.id, e.count))
   })

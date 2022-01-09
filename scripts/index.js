@@ -23,7 +23,7 @@ export const addItemsToCart = () => cartItems.map(e => {
 window.onload = () => {
   initStore();
 
-  history.pushState({}, "Home", "/");
+  history.pushState({}, "Home", "/shoppingList/");
   addItemsToCart();
 
   window.addEventListener('popstate', e => {

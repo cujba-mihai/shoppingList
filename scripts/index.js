@@ -29,6 +29,7 @@ window.onload = () => {
   addItemsToCart();
 
   window.addEventListener('popstate', e => {
+    console.log(e)
     if (!e.target.location.hash) {
       window.history.back();
       history.pushState({}, "Home", e.target.location);

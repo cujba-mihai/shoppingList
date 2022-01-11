@@ -7,7 +7,7 @@ import initStore from '../state/initStore.js';
 import CartItem from '../components/CartItem.js';
 import BookPresentation from '../components/BookPresentation.js';
 
-
+initStore();
 
 const bookShelf = document.getElementById('book-shelf');
 const addBooksOnShelf = () => booksAvailable.map(e => append(bookShelf, new BookItems(e.id, e.name, e.author, e.price, e.imageSrc)))
@@ -23,7 +23,7 @@ calculateTotal();
 addItemsToCart();
 
 window.onload = () => {
-  initStore();
+
 
   history.pushState({}, "Home", "/shoppingList");
 

@@ -7,8 +7,13 @@ import initStore from '../state/initStore.js';
 import CartItem from '../components/CartItem.js';
 import BookPresentation from '../components/BookPresentation.js';
 
+<<<<<<< HEAD
 
 initStore();
+=======
+initStore();
+
+>>>>>>> 545aac3bf689bc20b22a8deb7c4497702f802070
 const bookShelf = document.getElementById('book-shelf');
 const addBooksOnShelf = () => booksAvailable.map(e => append(bookShelf, new BookItems(e.id, e.name, e.author, e.price, e.imageSrc)))
 

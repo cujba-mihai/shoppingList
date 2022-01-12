@@ -118,7 +118,7 @@ export default class CartItem extends HTMLElement {
       crossorigin="anonymous"
     />
     <style>
-    @import './style.css'
+    @import 'https://kevinc37.github.io/shoppingList/style.css'
     </style>
     <div style="position: relative;">
     <ul id="shopping-item-container" class="shopping-body">
